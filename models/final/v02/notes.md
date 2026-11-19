@@ -1,0 +1,1 @@
+v01 + separate block of later offers (*(O_Create Offer) > *(O_Sent), labels @2) after W_Call after offers or W_Call incomplete files, then validation/outcome; first offer block always followed by W_Call after offers; rest as v01

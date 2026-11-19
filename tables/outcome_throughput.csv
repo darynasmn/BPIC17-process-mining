@@ -1,0 +1,5 @@
+outcome,cases,% of cases,mean,median,std
+Pending,17228,54.7,18.13,14.82,11.69
+Cancelled,10431,33.1,29.89,31.61,12.45
+Denied,3752,11.9,16.8,14.09,10.78
+None (open),98,0.3,28.69,27.0,21.0

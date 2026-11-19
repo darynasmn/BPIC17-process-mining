@@ -1,0 +1,16 @@
+Statistic,Value
+Number of cases,"31,509"
+Number of events,"1,202,267"
+Number of process variants,"15,930"
+Number of distinct activities,26
+Number of distinct case attribute labels,4
+Number of distinct event attribute labels,15
+Case length (events): mean / std,38.16 / 16.72
+"Case length (events): median [min, max]","35 [10, 180]"
+Case duration (days): mean / std,21.90 / 13.17
+Case duration (minutes): mean / std,"31,535.43 / 18,963.69"
+Case duration (seconds): mean / std,"1,892,125.92 / 1,137,821.69"
+Case duration (days): median,19.09
+Number of categorical event attributes,9 (7 excl. identifiers)
+Number of resources,149
+Observation period,2016-01-01 to 2017-02-01

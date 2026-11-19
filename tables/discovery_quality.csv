@@ -1,0 +1,5 @@
+model,sound,method,fitting cases %,avg fitness,precision,generalization,simplicity (arc degree),size,CFC,cyclicity,seconds,note
+IM 0.0,True,alignments,99.7,1.0,0.438,0.966,0.66,97,45,0.536,500,
+IM 0.2,True,alignments,64.9,0.965,0.713,0.981,0.684,65,29,0.431,26,
+IM 0.4,True,alignments,31.9,0.92,0.776,0.981,0.7,56,22,0.5,21,
+HM,False,TBR,0.0,0.721,1.0,0.94,0.596,62,34,0.516,4,alignments failed: Exception

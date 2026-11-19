@@ -1,0 +1,7 @@
+A activity,W activity,cases,both,only A,only W,neither,A before W start %,same time %,A after W start %,median A - W start (h)
+A_Submitted,W_Handle leads,31509,20423,0,0,11086,100.0,0.0,0.0,-1.07
+A_Concept,W_Complete application,31509,31509,0,0,0,62.5,0.0,37.5,-0.24
+A_Accepted,W_Complete application,31509,31509,0,0,0,0.2,0.0,99.8,0.26
+A_Complete,W_Call after offers,31509,31362,0,0,147,0.0,0.0,100.0,0.0
+A_Validating,W_Validate application,31509,21870,0,0,9639,0.0,0.0,100.0,0.0
+A_Incomplete,W_Call incomplete files,31509,15003,0,0,16506,0.0,0.0,100.0,0.0

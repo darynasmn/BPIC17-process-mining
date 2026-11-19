@@ -1,0 +1,18 @@
+gateway,id,tree acc,tree macro-F1,tree acc (with leaking),tree macro-F1 (with leaking),top features
+xor_sub,D1,0.829,0.781,0.829,0.781,"case:ApplicationType_New credit 0.53, case:RequestedAmount 0.47, case:LoanGoal_Unknown 0.00"
+xor_hl,D2,0.82,0.45,0.82,0.45,"case:RequestedAmount 0.50, case:LoanGoal_Existing loan takeover 0.39, case:LoanGoal_Not speficied 0.11"
+xor_wca,D3,0.903,0.475,0.903,0.475,"days_since_start 0.91, case:RequestedAmount 0.06, case:LoanGoal_Car 0.04"
+xor_co_again,D4,0.894,0.472,0.894,0.472,"Selected_True 0.82, case:LoanGoal_Not speficied 0.08, open_offers 0.07"
+xor_se_again,D5,0.924,0.578,0.924,0.578,"open_offers 1.00, Selected_False 0.00"
+xor_cao_out,D6,0.865,0.464,0.865,0.464,"Selected_True 0.92, OfferedAmount 0.06, days_since_start 0.03"
+xor_lco_again,D7,0.942,0.485,0.942,0.485,"n_offers 0.46, Selected_True 0.32, returned 0.14"
+xor_lse_again,D8,0.854,0.507,0.861,0.576,"Selected_False 0.64, n_offers 0.24, days_since_start 0.11"
+xor_bypass,D9,0.709,0.415,0.915,0.904,"Selected_True 0.92, open_offers 0.06, Accepted_False 0.01"
+xor_ret,D10,0.938,0.937,0.938,0.937,"returned 0.96, n_later_offers 0.01, days_since_start 0.01"
+xor_after_va,D11,0.635,0.616,0.642,0.633,"n_incomplete 0.50, case:ApplicationType_Limit raise 0.17, returned 0.10"
+xor_after_cif,D12,0.67,0.268,0.691,0.467,"Selected_False 0.45, open_offers 0.23, FirstWithdrawalAmount 0.14"
+xor_out,D13,0.874,0.774,0.923,0.879,"returned 0.71, CreditScore 0.20, case:ApplicationType_New credit 0.08"
+xor_oc,D14,1.0,1.0,1.0,1.0,open_offers 1.00
+xor_oc_again,D15,1.0,1.0,1.0,1.0,open_offers 1.00
+xor_ref,D16,0.993,0.498,0.993,0.498,"n_validate 0.66, OfferedAmount 0.21, NumberOfTerms 0.13"
+xor_ref_again,D17,1.0,1.0,1.0,1.0,open_offers 1.00

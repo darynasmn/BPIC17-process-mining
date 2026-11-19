@@ -1,0 +1,4 @@
+Application: start, A_Create Application, xor_sub, A_Submitted, xor_hl, W_Handle leads, xor_hl_j, xor_sub_j, W_Complete application
+Offers: xor_co_in, O_Create Offer, xor_co_again, xor_se_in, O_Sent, xor_se_again, xor_offer_out, W_Call after offers, xor_cao_out, xor_lo_in, O_Create Offer @2, xor_lco_again, xor_lse_in, O_Sent @2, xor_lse_again
+Validation: xor_val_entry, xor_bypass, xor_va_in, W_Validate application, xor_ret, O_Returned, xor_ret_j, xor_after_va, W_Call incomplete files, xor_after_cif
+Outcome: xor_outcome_entry, xor_out, A_Cancelled, O_Accepted, A_Pending, xor_out_j, xor_oc, xor_oc_in, O_Cancelled, xor_oc_again, xor_oc_j, xor_den, A_Denied, xor_den_j, xor_ref_in, O_Refused, xor_ref_again, end

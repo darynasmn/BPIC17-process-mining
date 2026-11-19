@@ -1,0 +1,87 @@
+from,to,frequency,cases,% of cases
+O_Create Offer,O_Sent,37953,31120,99.1
+O_Sent,W_Call after offers,31273,31264,99.5
+W_Complete application,O_Create Offer,29530,29530,94.0
+W_Validate application,O_Returned,21501,20756,66.1
+A_Create Application,A_Submitted,20339,20339,64.8
+W_Call after offers,W_Validate application,18524,18517,59.0
+O_Accepted,A_Pending,17228,17228,54.8
+A_Submitted,W_Complete application,14865,14865,47.3
+W_Call incomplete files,W_Validate application,14288,10478,33.4
+O_Returned,W_Call incomplete files,13946,13663,43.5
+A_Create Application,W_Complete application,11072,11072,35.2
+A_Cancelled,O_Cancelled,10270,10270,32.7
+W_Validate application,W_Call incomplete files,8933,6050,19.3
+W_Call after offers,A_Cancelled,8037,8037,25.6
+W_Validate application,O_Accepted,7154,7154,22.8
+O_Returned,O_Accepted,5279,5279,16.8
+W_Call incomplete files,O_Accepted,4780,4780,15.2
+A_Pending,O_Cancelled,4436,4436,14.1
+O_Cancelled,O_Cancelled,4429,3384,10.8
+W_Call after offers,O_Create Offer,4103,4101,13.1
+O_Sent,W_Validate application,4082,3874,12.3
+O_Create Offer,O_Create Offer,3896,3377,10.8
+A_Denied,O_Refused,3720,3720,11.8
+A_Submitted,W_Handle leads,3621,3621,11.5
+W_Handle leads,W_Complete application,3591,3591,11.4
+O_Sent,O_Sent,3184,2806,8.9
+O_Returned,A_Denied,2216,2216,7.1
+A_Submitted,O_Create Offer,1853,1853,5.9
+W_Call incomplete files,O_Create Offer,1687,1621,5.2
+O_Returned,W_Validate application,1563,1523,4.8
+O_Sent,A_Cancelled,1171,1171,3.7
+W_Call incomplete files,O_Returned,1164,1153,3.7
+W_Validate application,A_Denied,1156,1156,3.7
+O_Refused,O_Refused,975,777,2.5
+O_Sent,O_Create Offer,812,672,2.1
+O_Create Offer,O_Cancelled,757,737,2.3
+O_Cancelled,O_Create Offer,752,727,2.3
+W_Call incomplete files,A_Cancelled,737,737,2.3
+O_Sent,O_Returned,520,513,1.6
+W_Call after offers,O_Cancelled,468,468,1.5
+O_Sent,O_Cancelled,416,406,1.3
+O_Cancelled,O_Sent,347,343,1.1
+O_Cancelled,W_Validate application,345,345,1.1
+O_Cancelled,A_Cancelled,257,257,0.8
+W_Call incomplete files,A_Denied,191,191,0.6
+O_Create Offer,A_Cancelled,118,118,0.4
+W_Call after offers,A_Denied,110,110,0.4
+O_Returned,O_Create Offer,101,100,0.3
+W_Call incomplete files,O_Cancelled,97,97,0.3
+W_Validate application,W_Validate application,84,73,0.2
+O_Returned,A_Cancelled,73,73,0.2
+O_Returned,O_Returned,65,65,0.2
+O_Sent,W_Call incomplete files,64,64,0.2
+W_Validate application,O_Create Offer,51,51,0.2
+W_Call after offers,O_Sent,43,43,0.1
+W_Call after offers,W_Call after offers,40,39,0.1
+O_Create Offer,W_Validate application,36,36,0.1
+W_Validate application,A_Cancelled,35,35,0.1
+O_Cancelled,A_Denied,33,33,0.1
+W_Handle leads,O_Create Offer,30,30,0.1
+O_Create Offer,A_Denied,25,25,0.1
+W_Complete application,W_Complete application,23,22,0.1
+O_Create Offer,W_Complete application,21,21,0.1
+O_Sent,A_Denied,20,20,0.1
+W_Complete application,O_Sent,16,16,0.1
+O_Cancelled,W_Call incomplete files,13,13,0.0
+O_Sent,O_Accepted,12,12,0.0
+O_Returned,O_Cancelled,11,11,0.0
+W_Call incomplete files,W_Call after offers,11,11,0.0
+W_Call incomplete files,O_Sent,10,10,0.0
+O_Create Offer,W_Call incomplete files,9,9,0.0
+W_Validate application,O_Cancelled,7,7,0.0
+O_Cancelled,O_Returned,5,5,0.0
+W_Call incomplete files,W_Call incomplete files,3,3,0.0
+W_Complete application,A_Cancelled,3,3,0.0
+W_Call after offers,O_Accepted,2,2,0.0
+O_Cancelled,W_Call after offers,2,2,0.0
+O_Cancelled,W_Complete application,2,2,0.0
+O_Returned,W_Call after offers,2,2,0.0
+W_Complete application,O_Cancelled,1,1,0.0
+W_Complete application,A_Denied,1,1,0.0
+W_Handle leads,W_Handle leads,1,1,0.0
+O_Cancelled,O_Accepted,1,1,0.0
+O_Refused,A_Denied,1,1,0.0
+W_Validate application,O_Sent,1,1,0.0
+W_Call after offers,O_Returned,1,1,0.0

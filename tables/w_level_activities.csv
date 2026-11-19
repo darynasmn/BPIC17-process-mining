@@ -1,0 +1,17 @@
+concept:name,events,cases,% of cases,per case (all cases),per case (if present),max per case
+W_Handle leads,3622,3621,11.5,0.12,1.0,2
+W_Complete application,29574,29551,94.1,0.94,1.0,3
+W_Call after offers,31328,31264,99.5,1.0,1.0,3
+W_Validate application,38922,21825,69.5,1.24,1.78,9
+W_Call incomplete files,22968,14958,47.6,0.73,1.54,7
+O_Create Offer,42815,31411,100.0,1.36,1.36,10
+O_Sent,41554,31264,99.5,1.32,1.33,10
+O_Returned,23256,21723,69.2,0.74,1.07,3
+O_Accepted,17228,17228,54.8,0.55,1.0,1
+O_Refused,4695,3720,11.8,0.15,1.26,8
+O_Cancelled,20892,15676,49.9,0.67,1.33,10
+A_Create Application,31411,31411,100.0,1.0,1.0,1
+A_Submitted,20339,20339,64.8,0.65,1.0,1
+A_Pending,17228,17228,54.8,0.55,1.0,1
+A_Denied,3753,3752,11.9,0.12,1.0,2
+A_Cancelled,10431,10431,33.2,0.33,1.0,1

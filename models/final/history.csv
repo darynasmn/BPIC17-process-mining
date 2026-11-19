@@ -1,0 +1,6 @@
+version,sound,size,CFC,cyclicity,arc degree,train fitting cases % (TBR),test fitting cases % (align),test avg fitness (align),test precision (align-ETC),test generalization (TBR),test generalization (align),seconds,change
+v00,True,65,29,0.431,0.684,64.3,64.9,0.965,0.713,0.981,0.981,36,"Baseline: Inductive Miner (noise 0.2) on the W_+O_+A_ log (16 activities), unchanged."
+v01,True,58,26,0.397,0.707,49.9,63.2,0.962,0.803,0.982,0.982,33,v00 + sequential validation block instead of the AND-block: W_Validate application > X(O_Returned | skip) > X(exit | W_Call incomplete files > X(back to W_Validate application | exit)); no self-loop around W_Call incomplete files; rest as v00
+v02,True,84,33,0.5,0.724,0.0,72.7,0.981,0.801,0.903,0.98,41,"v01 + separate block of later offers (*(O_Create Offer) > *(O_Sent), labels @2) after W_Call after offers or W_Call incomplete files, then validation/outcome; first offer block always followed by W_Call after offers; rest as v01"
+v03,True,85,34,0.494,0.714,0.0,82.0,0.988,0.821,0.898,0.973,36,v02 + exactly one outcome: X(A_Cancelled > O_Cancelled* | O_Accepted > A_Pending > O_Cancelled* | A_Denied > O_Refused*); rest as v02
+v04,True,90,36,0.467,0.714,0.0,87.6,0.992,0.821,0.849,0.973,42,v03 + W_Complete application optional only after A_Submitted (online branch); mandatory without A_Submitted; rest as v03

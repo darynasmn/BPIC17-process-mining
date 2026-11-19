@@ -1,0 +1,11 @@
+activity,log moves,model moves,total
+O_Create Offer,2119,2,2121
+O_Sent,2044,41,2085
+A_Cancelled,2,1087,1089
+W_Complete application,10,589,599
+O_Cancelled,535,0,535
+W_Call after offers,88,107,195
+O_Returned,2,22,24
+W_Validate application,14,0,14
+A_Denied,9,0,9
+W_Handle leads,1,0,1

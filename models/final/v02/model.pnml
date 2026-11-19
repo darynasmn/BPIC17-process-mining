@@ -1,0 +1,572 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="exi_xor_after_va">
+        <name>
+          <text>exi_xor_after_va</text>
+        </name>
+      </place>
+      <place id="ent_xor_out_j">
+        <name>
+          <text>ent_xor_out_j</text>
+        </name>
+      </place>
+      <place id="ent_xor_va_in">
+        <name>
+          <text>ent_xor_va_in</text>
+        </name>
+      </place>
+      <place id="exi_xor_lse_again">
+        <name>
+          <text>exi_xor_lse_again</text>
+        </name>
+      </place>
+      <place id="exi_xor_se_again">
+        <name>
+          <text>exi_xor_se_again</text>
+        </name>
+      </place>
+      <place id="ent_xor_hl_j">
+        <name>
+          <text>ent_xor_hl_j</text>
+        </name>
+      </place>
+      <place id="exi_xor_den">
+        <name>
+          <text>exi_xor_den</text>
+        </name>
+      </place>
+      <place id="ent_t33">
+        <name>
+          <text>ent_t33</text>
+        </name>
+      </place>
+      <place id="exi_xor_oc">
+        <name>
+          <text>exi_xor_oc</text>
+        </name>
+      </place>
+      <place id="exi_xor_oc_again">
+        <name>
+          <text>exi_xor_oc_again</text>
+        </name>
+      </place>
+      <place id="ent_xor_den_j">
+        <name>
+          <text>ent_xor_den_j</text>
+        </name>
+      </place>
+      <place id="ent_xor_oc_j">
+        <name>
+          <text>ent_xor_oc_j</text>
+        </name>
+      </place>
+      <place id="exi_xor_lco_again">
+        <name>
+          <text>exi_xor_lco_again</text>
+        </name>
+      </place>
+      <place id="ent_xor_val_entry">
+        <name>
+          <text>ent_xor_val_entry</text>
+        </name>
+      </place>
+      <place id="ent_xor_oc_in">
+        <name>
+          <text>ent_xor_oc_in</text>
+        </name>
+      </place>
+      <place id="exi_xor_after_cif">
+        <name>
+          <text>exi_xor_after_cif</text>
+        </name>
+      </place>
+      <place id="ent_xor_lse_in">
+        <name>
+          <text>ent_xor_lse_in</text>
+        </name>
+      </place>
+      <place id="ent_xor_ret_j">
+        <name>
+          <text>ent_xor_ret_j</text>
+        </name>
+      </place>
+      <place id="exi_xor_out">
+        <name>
+          <text>exi_xor_out</text>
+        </name>
+      </place>
+      <place id="exi_xor_bypass">
+        <name>
+          <text>exi_xor_bypass</text>
+        </name>
+      </place>
+      <place id="exi_xor_cao_out">
+        <name>
+          <text>exi_xor_cao_out</text>
+        </name>
+      </place>
+      <place id="ent_xor_se_in">
+        <name>
+          <text>ent_xor_se_in</text>
+        </name>
+      </place>
+      <place id="exi_xor_sub">
+        <name>
+          <text>exi_xor_sub</text>
+        </name>
+      </place>
+      <place id="exi_xor_ref_again">
+        <name>
+          <text>exi_xor_ref_again</text>
+        </name>
+      </place>
+      <place id="exi_xor_hl">
+        <name>
+          <text>exi_xor_hl</text>
+        </name>
+      </place>
+      <place id="ent_xor_sub_j">
+        <name>
+          <text>ent_xor_sub_j</text>
+        </name>
+      </place>
+      <place id="ent_xor_co_in">
+        <name>
+          <text>ent_xor_co_in</text>
+        </name>
+      </place>
+      <place id="ent_xor_lo_in">
+        <name>
+          <text>ent_xor_lo_in</text>
+        </name>
+      </place>
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="exi_xor_co_again">
+        <name>
+          <text>exi_xor_co_again</text>
+        </name>
+      </place>
+      <place id="ent_xor_ref_in">
+        <name>
+          <text>ent_xor_ref_in</text>
+        </name>
+      </place>
+      <place id="ent_xor_outcome_entry">
+        <name>
+          <text>ent_xor_outcome_entry</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="exi_xor_ret">
+        <name>
+          <text>exi_xor_ret</text>
+        </name>
+      </place>
+      <transition id="t16">
+        <name>
+          <text>W_Call after offers</text>
+        </name>
+      </transition>
+      <transition id="t10">
+        <name>
+          <text>O_Create Offer</text>
+        </name>
+      </transition>
+      <transition id="t13">
+        <name>
+          <text>O_Sent</text>
+        </name>
+      </transition>
+      <transition id="sfl_f017">
+        <name>
+          <text>sfl_f017</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="55907b3e-24f4-4e12-8f26-5112651fef6a"/>
+      </transition>
+      <transition id="sfl_f046">
+        <name>
+          <text>sfl_f046</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="cd7729fc-3312-4fd1-b40f-d3e07ce9cfac"/>
+      </transition>
+      <transition id="sfl_f024">
+        <name>
+          <text>sfl_f024</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="9f50cae6-8514-4fc5-9769-953c7a6c7db1"/>
+      </transition>
+      <transition id="sfl_f045">
+        <name>
+          <text>sfl_f045</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="f65e841e-bd23-4f60-b8b1-0c192ce1c69f"/>
+      </transition>
+      <transition id="t1">
+        <name>
+          <text>A_Create Application</text>
+        </name>
+      </transition>
+      <transition id="t33">
+        <name>
+          <text>A_Pending</text>
+        </name>
+      </transition>
+      <transition id="t6">
+        <name>
+          <text>W_Handle leads</text>
+        </name>
+      </transition>
+      <transition id="xor_val_entry">
+        <name>
+          <text>xor_val_entry</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="0cbc0937-6bc3-41d4-b081-4b36a75d752e"/>
+      </transition>
+      <transition id="sfl_f050">
+        <name>
+          <text>sfl_f050</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="58f7432a-db6d-460a-af40-7c9863859a1d"/>
+      </transition>
+      <transition id="sfl_f037">
+        <name>
+          <text>sfl_f037</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="9bc8b676-d68c-44c7-8d93-a327f8638577"/>
+      </transition>
+      <transition id="sfl_f062">
+        <name>
+          <text>sfl_f062</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="86e71a22-cc2f-4af5-8a58-725189be530b"/>
+      </transition>
+      <transition id="t38">
+        <name>
+          <text>O_Cancelled</text>
+        </name>
+      </transition>
+      <transition id="t50">
+        <name>
+          <text>O_Sent</text>
+        </name>
+      </transition>
+      <transition id="sfl_f033">
+        <name>
+          <text>sfl_f033</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="36caabbc-817b-4c37-9733-79d96e1a30b8"/>
+      </transition>
+      <transition id="t8">
+        <name>
+          <text>W_Complete application</text>
+        </name>
+      </transition>
+      <transition id="sfl_f003">
+        <name>
+          <text>sfl_f003</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="be64f698-c72d-4c21-90af-9f3bb014f79d"/>
+      </transition>
+      <transition id="sfl_f049">
+        <name>
+          <text>sfl_f049</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="3e4c3c6a-b997-4eb6-b598-687d0becc58d"/>
+      </transition>
+      <transition id="t3">
+        <name>
+          <text>A_Submitted</text>
+        </name>
+      </transition>
+      <transition id="sfl_f053">
+        <name>
+          <text>sfl_f053</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="48627389-dae4-4ae5-bf42-fdc2591507ff"/>
+      </transition>
+      <transition id="sfl_f036">
+        <name>
+          <text>sfl_f036</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="d75df62d-98e5-437b-9c27-85e4b12cb9b6"/>
+      </transition>
+      <transition id="xor_hl_j">
+        <name>
+          <text>xor_hl_j</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="989cabca-7b98-4a66-a4b5-e01dbba6ee69"/>
+      </transition>
+      <transition id="sfl_f006">
+        <name>
+          <text>sfl_f006</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="731461fe-93ba-4044-8ba3-5d8b30fc69db"/>
+      </transition>
+      <transition id="t32">
+        <name>
+          <text>O_Accepted</text>
+        </name>
+      </transition>
+      <transition id="xor_oc_j">
+        <name>
+          <text>xor_oc_j</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="67c7bb84-1a35-432a-bffd-b5a34b971c0c"/>
+      </transition>
+      <transition id="t41">
+        <name>
+          <text>A_Denied</text>
+        </name>
+      </transition>
+      <transition id="sfl_f029">
+        <name>
+          <text>sfl_f029</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="72100f20-fc2c-4da2-a648-571ff81788a0"/>
+      </transition>
+      <transition id="xor_out_j">
+        <name>
+          <text>xor_out_j</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="651b674e-eea3-4ba2-98be-b0d08bc6eabe"/>
+      </transition>
+      <transition id="t31">
+        <name>
+          <text>A_Cancelled</text>
+        </name>
+      </transition>
+      <transition id="t28">
+        <name>
+          <text>W_Call incomplete files</text>
+        </name>
+      </transition>
+      <transition id="sfl_f057">
+        <name>
+          <text>sfl_f057</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="4af90e16-f2f5-4c9f-a5d1-0fe8085b702a"/>
+      </transition>
+      <transition id="t44">
+        <name>
+          <text>O_Refused</text>
+        </name>
+      </transition>
+      <transition id="sfl_f058">
+        <name>
+          <text>sfl_f058</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="7b6f1a03-9e33-4ae1-91e6-406c7918a9e1"/>
+      </transition>
+      <transition id="sfl_f022">
+        <name>
+          <text>sfl_f022</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="e2e34540-7541-4e03-8816-8dde465fbea8"/>
+      </transition>
+      <transition id="t23">
+        <name>
+          <text>W_Validate application</text>
+        </name>
+      </transition>
+      <transition id="sfl_f035">
+        <name>
+          <text>sfl_f035</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="5dc95123-5371-4947-9255-710961c3d669"/>
+      </transition>
+      <transition id="t47">
+        <name>
+          <text>O_Create Offer</text>
+        </name>
+      </transition>
+      <transition id="t25">
+        <name>
+          <text>O_Returned</text>
+        </name>
+      </transition>
+      <transition id="sfl_f066">
+        <name>
+          <text>sfl_f066</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="70d34cd5-48c3-45fd-adb1-297101155074"/>
+      </transition>
+      <transition id="sfl_f067">
+        <name>
+          <text>sfl_f067</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="d191b380-18c7-4c0a-a035-780f08dabe4a"/>
+      </transition>
+      <transition id="sfl_f014">
+        <name>
+          <text>sfl_f014</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="ffa86eec-7614-4731-9ebd-0cd6f9619fa4"/>
+      </transition>
+      <transition id="xor_outcome_entry">
+        <name>
+          <text>xor_outcome_entry</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="0739d9bc-0d9f-4f70-81a5-4fcbdf60768c"/>
+      </transition>
+      <transition id="xor_den_j">
+        <name>
+          <text>xor_den_j</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="14a5ba64-c33c-4101-8757-20cd9760c108"/>
+      </transition>
+      <transition id="sfl_f025">
+        <name>
+          <text>sfl_f025</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="cb8b5a21-ac5e-40ae-b59d-51d6a8c04766"/>
+      </transition>
+      <transition id="sfl_f021">
+        <name>
+          <text>sfl_f021</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="9c3c5081-9569-425e-93b8-f5745740ecc1"/>
+      </transition>
+      <transition id="xor_ret_j">
+        <name>
+          <text>xor_ret_j</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="78a74585-c2bf-42b1-8f0f-9f09db941d05"/>
+      </transition>
+      <transition id="sfl_f063">
+        <name>
+          <text>sfl_f063</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="a2905caf-e5cb-4cf1-922d-393cbabbc131"/>
+      </transition>
+      <transition id="sfl_f013">
+        <name>
+          <text>sfl_f013</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="def01e3d-92db-4bd5-a00b-e581a0403a55"/>
+      </transition>
+      <arc id="5206108176" source="ent_xor_out_j" target="xor_out_j"/>
+      <arc id="5208639504" source="exi_xor_ret" target="sfl_f029"/>
+      <arc id="5218465808" source="t31" target="ent_xor_out_j"/>
+      <arc id="5208666128" source="exi_xor_lse_again" target="sfl_f067"/>
+      <arc id="5218467920" source="sfl_f063" target="ent_xor_lse_in"/>
+      <arc id="5208641616" source="exi_xor_cao_out" target="sfl_f021"/>
+      <arc id="5218470096" source="sfl_f049" target="ent_xor_oc_in"/>
+      <arc id="5218472144" source="t1" target="exi_xor_sub"/>
+      <arc id="5218476240" source="xor_val_entry" target="exi_xor_bypass"/>
+      <arc id="5218466064" source="sfl_f045" target="ent_xor_oc_in"/>
+      <arc id="5218464016" source="sfl_f022" target="ent_xor_val_entry"/>
+      <arc id="5206124944" source="ent_xor_oc_j" target="xor_oc_j"/>
+      <arc id="5218478416" source="source" target="t1"/>
+      <arc id="5218478288" source="ent_xor_sub_j" target="t8"/>
+      <arc id="5218474320" source="xor_out_j" target="exi_xor_oc"/>
+      <arc id="5218471376" source="xor_outcome_entry" target="exi_xor_out"/>
+      <arc id="5218466192" source="t41" target="ent_xor_ref_in"/>
+      <arc id="5208648080" source="exi_xor_cao_out" target="sfl_f022"/>
+      <arc id="5218464144" source="sfl_f013" target="ent_xor_co_in"/>
+      <arc id="5218462096" source="exi_xor_ret" target="t25"/>
+      <arc id="5218474448" source="sfl_f035" target="ent_xor_va_in"/>
+      <arc id="5218476496" source="ent_xor_oc_in" target="t38"/>
+      <arc id="5218472400" source="t28" target="exi_xor_after_cif"/>
+      <arc id="5218464272" source="sfl_f014" target="ent_xor_se_in"/>
+      <arc id="5208658512" source="exi_xor_after_cif" target="sfl_f036"/>
+      <arc id="5218470480" source="xor_hl_j" target="ent_xor_sub_j"/>
+      <arc id="5218476624" source="exi_xor_den" target="t41"/>
+      <arc id="5206027728" source="ent_xor_val_entry" target="xor_val_entry"/>
+      <arc id="5218464400" source="sfl_f058" target="ent_xor_den_j"/>
+      <arc id="5218466448" source="t3" target="exi_xor_hl"/>
+      <arc id="5206104784" source="ent_t33" target="t33"/>
+      <arc id="5218476752" source="exi_xor_out" target="t31"/>
+      <arc id="5218472656" source="t16" target="exi_xor_cao_out"/>
+      <arc id="5218474704" source="sfl_f057" target="ent_xor_ref_in"/>
+      <arc id="5218417424" source="exi_xor_lco_again" target="sfl_f063"/>
+      <arc id="5218472784" source="t6" target="ent_xor_hl_j"/>
+      <arc id="5208644432" source="exi_xor_oc" target="sfl_f046"/>
+      <arc id="5218474832" source="t50" target="exi_xor_lse_again"/>
+      <arc id="5218395024" source="exi_xor_bypass" target="sfl_f024"/>
+      <arc id="5218456016" source="sfl_f053" target="ent_xor_den_j"/>
+      <arc id="5206133712" source="ent_xor_ret_j" target="xor_ret_j"/>
+      <arc id="5218477008" source="exi_xor_se_again" target="t16"/>
+      <arc id="5218473936" source="xor_ret_j" target="exi_xor_after_va"/>
+      <arc id="5218470864" source="t25" target="ent_xor_ret_j"/>
+      <arc id="5218474960" source="t8" target="ent_xor_co_in"/>
+      <arc id="5206113296" source="ent_xor_den_j" target="xor_den_j"/>
+      <arc id="5206178832" source="exi_xor_lse_again" target="sfl_f066"/>
+      <arc id="5208638480" source="exi_xor_oc" target="sfl_f045"/>
+      <arc id="5208642640" source="exi_xor_co_again" target="sfl_f013"/>
+      <arc id="5218477136" source="ent_xor_ref_in" target="t44"/>
+      <arc id="5218462160" source="sfl_f021" target="ent_xor_lo_in"/>
+      <arc id="5206164624" source="exi_xor_sub" target="sfl_f003"/>
+      <arc id="5218477264" source="ent_xor_lse_in" target="t50"/>
+      <arc id="5218475216" source="t23" target="exi_xor_ret"/>
+      <arc id="5218471120" source="sfl_f046" target="ent_xor_oc_j"/>
+      <arc id="5206146256" source="exi_xor_ref_again" target="sfl_f057"/>
+      <arc id="5218469072" source="sfl_f017" target="ent_xor_se_in"/>
+      <arc id="5218473168" source="t13" target="exi_xor_se_again"/>
+      <arc id="5206170896" source="exi_xor_bypass" target="sfl_f025"/>
+      <arc id="5206177040" source="exi_xor_ref_again" target="sfl_f058"/>
+      <arc id="5206127952" source="ent_xor_outcome_entry" target="xor_outcome_entry"/>
+      <arc id="5208651088" source="exi_xor_hl" target="sfl_f006"/>
+      <arc id="5218403664" source="exi_xor_lco_again" target="sfl_f062"/>
+      <arc id="5218477392" source="exi_xor_sub" target="t3"/>
+      <arc id="5218475344" source="sfl_f036" target="ent_xor_outcome_entry"/>
+      <arc id="5218471248" source="t38" target="exi_xor_oc_again"/>
+      <arc id="5218473296" source="t33" target="ent_xor_out_j"/>
+      <arc id="5218467216" source="sfl_f050" target="ent_xor_oc_j"/>
+      <arc id="5206142352" source="exi_xor_after_va" target="sfl_f033"/>
+      <arc id="5218465168" source="sfl_f025" target="ent_xor_outcome_entry"/>
+      <arc id="5218476880" source="ent_xor_co_in" target="t10"/>
+      <arc id="5218456528" source="sfl_f067" target="ent_xor_val_entry"/>
+      <arc id="5206144720" source="exi_xor_oc_again" target="sfl_f049"/>
+      <arc id="5206177232" source="exi_xor_oc_again" target="sfl_f050"/>
+      <arc id="5218477520" source="ent_xor_lo_in" target="t47"/>
+      <arc id="5218475472" source="sfl_f024" target="ent_xor_va_in"/>
+      <arc id="5218473424" source="t47" target="exi_xor_lco_again"/>
+      <arc id="5218469968" source="sfl_f062" target="ent_xor_lo_in"/>
+      <arc id="5208659472" source="exi_xor_after_cif" target="sfl_f035"/>
+      <arc id="5218465296" source="t32" target="ent_t33"/>
+      <arc id="5218477648" source="ent_xor_se_in" target="t13"/>
+      <arc id="5218473552" source="xor_den_j" target="sink"/>
+      <arc id="5218471504" source="xor_oc_j" target="exi_xor_den"/>
+      <arc id="5206126032" source="ent_xor_hl_j" target="xor_hl_j"/>
+      <arc id="5218476112" source="sfl_f066" target="ent_xor_lse_in"/>
+      <arc id="5218478160" source="exi_xor_out" target="t32"/>
+      <arc id="5218477776" source="exi_xor_hl" target="t6"/>
+      <arc id="5218473680" source="sfl_f003" target="ent_xor_sub_j"/>
+      <arc id="5218469584" source="sfl_f006" target="ent_xor_hl_j"/>
+      <arc id="5218457808" source="sfl_f033" target="ent_xor_outcome_entry"/>
+      <arc id="5218477904" source="ent_xor_va_in" target="t23"/>
+      <arc id="5218475856" source="sfl_f037" target="ent_xor_lo_in"/>
+      <arc id="5208639376" source="exi_xor_after_cif" target="sfl_f037"/>
+      <arc id="5206169488" source="exi_xor_se_again" target="sfl_f017"/>
+      <arc id="5218459536" source="sfl_f029" target="ent_xor_ret_j"/>
+      <arc id="5208649680" source="exi_xor_co_again" target="sfl_f014"/>
+      <arc id="5208653776" source="exi_xor_den" target="sfl_f053"/>
+      <arc id="5218475984" source="t44" target="exi_xor_ref_again"/>
+      <arc id="5218471888" source="t10" target="exi_xor_co_again"/>
+      <arc id="5218478032" source="exi_xor_after_va" target="t28"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

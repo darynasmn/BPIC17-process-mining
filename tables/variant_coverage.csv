@@ -1,0 +1,5 @@
+abstraction,cases,events,variants,top-1 variant % cases,top-10 variants % cases,variants for 50 % cases,variants for 80 % cases,singleton variants
+Full log,31509,1202267,15930,3.4,15.3,1103,9629,13907
+Only 'complete' events,31509,475306,5623,7.0,31.2,35,610,4150
+Only A_ and O_ events,31509,433444,2630,16.2,56.7,8,65,1835
+"W_, O_ and A_ (16 activities)",31509,361008,2912,11.9,48.5,11,100,1998

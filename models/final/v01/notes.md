@@ -1,0 +1,1 @@
+v00 + sequential validation block instead of the AND-block: W_Validate application > X(O_Returned | skip) > X(exit | W_Call incomplete files > X(back to W_Validate application | exit)); no self-loop around W_Call incomplete files; rest as v00

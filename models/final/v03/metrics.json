@@ -1,0 +1,37 @@
+{
+  "version": "v03",
+  "sound": true,
+  "size": 85,
+  "CFC": 34,
+  "cyclicity": 0.494,
+  "arc degree": 0.714,
+  "train fitting cases % (TBR)": 0.0,
+  "test fitting cases % (align)": 82.0,
+  "test avg fitness (align)": 0.988,
+  "test precision (align-ETC)": 0.821,
+  "test generalization (TBR)": 0.898,
+  "test generalization (align)": 0.973,
+  "seconds": 36,
+  "top unfit variants (test)": [
+    {
+      "cases": 124,
+      "variant": "A_Create Application > A_Submitted > O_Create Offer > O_Sent > W_Call after offers > A_Cancelled > O_Cancelled"
+    },
+    {
+      "cases": 70,
+      "variant": "A_Create Application > A_Submitted > O_Create Offer > O_Sent > W_Call after offers > W_Validate application > O_Returned > W_Call incomplete files > W_Validate application > O_Accepted > A_Pending"
+    },
+    {
+      "cases": 64,
+      "variant": "A_Create Application > A_Submitted > O_Create Offer > O_Sent > W_Call after offers > W_Validate application > O_Returned > O_Accepted > A_Pending"
+    },
+    {
+      "cases": 55,
+      "variant": "A_Create Application > A_Submitted > O_Create Offer > O_Sent > W_Call after offers > W_Validate application > O_Returned > W_Call incomplete files > O_Accepted > A_Pending"
+    },
+    {
+      "cases": 29,
+      "variant": "A_Create Application > W_Complete application > O_Create Offer > O_Sent > W_Call after offers > W_Validate application > W_Call incomplete files > O_Returned > W_Validate application > O_Accepted > A_Pending"
+    }
+  ]
+}

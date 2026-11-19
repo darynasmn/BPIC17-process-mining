@@ -1,0 +1,344 @@
+D1 xor_sub: online application (A_Submitted) or not
+  acc 0.829 (baseline 0.648), macro-F1 0.781 (baseline 0.393)
+|--- case:ApplicationType_Limit raise <= 0.5
+|   |--- case:RequestedAmount <= 4250.0
+|   |   |--- case:LoanGoal_Unknown <= 0.5
+|   |   |   |--- class: not online
+|   |   |--- case:LoanGoal_Unknown >  0.5
+|   |   |   |--- class: not online
+|   |--- case:RequestedAmount >  4250.0
+|   |   |--- case:RequestedAmount <= 20295.0
+|   |   |   |--- class: A_Submitted
+|   |   |--- case:RequestedAmount >  20295.0
+|   |   |   |--- class: A_Submitted
+|--- case:ApplicationType_Limit raise >  0.5
+|   |--- class: not online
+
+
+D2 xor_hl: online: W_Handle leads or not
+  acc 0.820 (baseline 0.820), macro-F1 0.450 (baseline 0.450)
+|--- case:LoanGoal_Existing loan takeover <= 0.5
+|   |--- case:RequestedAmount <= 9625.0
+|   |   |--- case:RequestedAmount <= 5775.0
+|   |   |   |--- class: no W_Handle leads
+|   |   |--- case:RequestedAmount >  5775.0
+|   |   |   |--- class: no W_Handle leads
+|   |--- case:RequestedAmount >  9625.0
+|   |   |--- case:LoanGoal_Not speficied <= 0.5
+|   |   |   |--- class: no W_Handle leads
+|   |   |--- case:LoanGoal_Not speficied >  0.5
+|   |   |   |--- class: no W_Handle leads
+|--- case:LoanGoal_Existing loan takeover >  0.5
+|   |--- case:RequestedAmount <= 25125.0
+|   |   |--- case:RequestedAmount <= 9900.0
+|   |   |   |--- class: no W_Handle leads
+|   |   |--- case:RequestedAmount >  9900.0
+|   |   |   |--- class: no W_Handle leads
+|   |--- case:RequestedAmount >  25125.0
+|   |   |--- case:RequestedAmount <= 44400.0
+|   |   |   |--- class: no W_Handle leads
+|   |   |--- case:RequestedAmount >  44400.0
+|   |   |   |--- class: no W_Handle leads
+
+
+D3 xor_wca: online: W_Complete application or skip
+  acc 0.903 (baseline 0.903), macro-F1 0.475 (baseline 0.475)
+|--- days_since_start <= 0.0
+|   |--- case:RequestedAmount <= 10450.0
+|   |   |--- case:LoanGoal_Car <= 0.5
+|   |   |   |--- class: W_Complete application
+|   |   |--- case:LoanGoal_Car >  0.5
+|   |   |   |--- class: W_Complete application
+|   |--- case:RequestedAmount >  10450.0
+|   |   |--- days_since_start <= 0.0
+|   |   |   |--- class: W_Complete application
+|   |   |--- days_since_start >  0.0
+|   |   |   |--- class: W_Complete application
+|--- days_since_start >  0.0
+|   |--- days_since_start <= 0.0
+|   |   |--- class: W_Complete application
+|   |--- days_since_start >  0.0
+|   |   |--- class: W_Complete application
+
+
+D4 xor_co_again: first offers: create one more offer?
+  acc 0.894 (baseline 0.894), macro-F1 0.472 (baseline 0.472)
+|--- case:ApplicationType_New credit <= 0.5
+|   |--- FirstWithdrawalAmount <= 1.0
+|   |   |--- OfferedAmount <= 14237.5
+|   |   |   |--- class: O_Sent
+|   |   |--- OfferedAmount >  14237.5
+|   |   |   |--- class: O_Sent
+|   |--- FirstWithdrawalAmount >  1.0
+|   |   |--- days_since_start <= 0.9
+|   |   |   |--- class: O_Sent
+|   |   |--- days_since_start >  0.9
+|   |   |   |--- class: O_Sent
+|--- case:ApplicationType_New credit >  0.5
+|   |--- FirstWithdrawalAmount <= 0.1
+|   |   |--- n_offers <= 1.5
+|   |   |   |--- class: O_Sent
+|   |   |--- n_offers >  1.5
+|   |   |   |--- class: O_Sent
+|   |--- FirstWithdrawalAmount >  0.1
+|   |   |--- case:LoanGoal_Not speficied <= 0.5
+|   |   |   |--- class: O_Sent
+|   |   |--- case:LoanGoal_Not speficied >  0.5
+|   |   |   |--- class: O_Sent
+
+
+D5 xor_se_again: first offers: send one more, or W_Call after offers
+  acc 0.924 (baseline 0.919), macro-F1 0.578 (baseline 0.479)
+|--- open_offers <= 1.5
+|   |--- class: W_Call after offers
+|--- open_offers >  1.5
+|   |--- open_offers <= 2.5
+|   |   |--- FirstWithdrawalAmount <= 121.5
+|   |   |   |--- class: W_Call after offers
+|   |   |--- FirstWithdrawalAmount >  121.5
+|   |   |   |--- class: W_Call after offers
+|   |--- open_offers >  2.5
+|   |   |--- class: O_Sent
+
+
+D6 xor_cao_out: after W_Call after offers: later offer or continue
+  acc 0.865 (baseline 0.865), macro-F1 0.464 (baseline 0.464)
+|--- case:ApplicationType_New credit <= 0.5
+|   |--- FirstWithdrawalAmount <= 1.0
+|   |   |--- OfferedAmount <= 14750.0
+|   |   |   |--- class: continue (validation / outcome)
+|   |   |--- OfferedAmount >  14750.0
+|   |   |   |--- class: continue (validation / outcome)
+|   |--- FirstWithdrawalAmount >  1.0
+|   |   |--- case:RequestedAmount <= 13750.0
+|   |   |   |--- class: continue (validation / outcome)
+|   |   |--- case:RequestedAmount >  13750.0
+|   |   |   |--- class: continue (validation / outcome)
+|--- case:ApplicationType_New credit >  0.5
+|   |--- OfferedAmount <= 5082.5
+|   |   |--- FirstWithdrawalAmount <= 1881.0
+|   |   |   |--- class: continue (validation / outcome)
+|   |   |--- FirstWithdrawalAmount >  1881.0
+|   |   |   |--- class: continue (validation / outcome)
+|   |--- OfferedAmount >  5082.5
+|   |   |--- open_offers <= 1.5
+|   |   |   |--- class: continue (validation / outcome)
+|   |   |--- open_offers >  1.5
+|   |   |   |--- class: continue (validation / outcome)
+
+
+D7 xor_lco_again: later offers: create one more?
+  acc 0.942 (baseline 0.942), macro-F1 0.485 (baseline 0.485)
+|--- n_offers <= 2.5
+|   |--- days_since_start <= 0.0
+|   |   |--- class: O_Sent (later offer)
+|   |--- days_since_start >  0.0
+|   |   |--- returned <= 0.5
+|   |   |   |--- class: O_Sent (later offer)
+|   |   |--- returned >  0.5
+|   |   |   |--- class: O_Sent (later offer)
+|--- n_offers >  2.5
+|   |--- returned <= 0.5
+|   |   |--- days_since_start <= 0.1
+|   |   |   |--- class: O_Sent (later offer)
+|   |   |--- days_since_start >  0.1
+|   |   |   |--- class: O_Sent (later offer)
+|   |--- returned >  0.5
+|   |   |--- case:RequestedAmount <= 20250.0
+|   |   |   |--- class: O_Sent (later offer)
+|   |   |--- case:RequestedAmount >  20250.0
+|   |   |   |--- class: O_Sent (later offer)
+
+
+D8 xor_lse_again: later offers: send one more, or continue
+  acc 0.854 (baseline 0.853), macro-F1 0.507 (baseline 0.460)
+|--- n_offers <= 3.5
+|   |--- n_incomplete <= 0.5
+|   |   |--- days_since_start <= 1.0
+|   |   |   |--- class: continue (validation / outcome)
+|   |   |--- days_since_start >  1.0
+|   |   |   |--- class: continue (validation / outcome)
+|   |--- n_incomplete >  0.5
+|   |   |--- case:RequestedAmount <= 27750.0
+|   |   |   |--- class: continue (validation / outcome)
+|   |   |--- case:RequestedAmount >  27750.0
+|   |   |   |--- class: continue (validation / outcome)
+|--- n_offers >  3.5
+|   |--- returned <= 0.5
+|   |   |--- days_since_start <= 1.8
+|   |   |   |--- class: O_Sent (later offer)
+|   |   |--- days_since_start >  1.8
+|   |   |   |--- class: continue (validation / outcome)
+|   |--- returned >  0.5
+|   |   |--- case:RequestedAmount <= 21000.0
+|   |   |   |--- class: continue (validation / outcome)
+|   |   |--- case:RequestedAmount >  21000.0
+|   |   |   |--- class: continue (validation / outcome)
+
+
+D9 xor_bypass: validation or directly to the outcome
+  acc 0.709 (baseline 0.709), macro-F1 0.415 (baseline 0.415)
+|--- FirstWithdrawalAmount <= 1.5
+|   |--- case:ApplicationType_New credit <= 0.5
+|   |   |--- OfferedAmount <= 14487.5
+|   |   |   |--- class: W_Validate application
+|   |   |--- OfferedAmount >  14487.5
+|   |   |   |--- class: W_Validate application
+|   |--- case:ApplicationType_New credit >  0.5
+|   |   |--- n_later_offers <= 0.5
+|   |   |   |--- class: W_Validate application
+|   |   |--- n_later_offers >  0.5
+|   |   |   |--- class: W_Validate application
+|--- FirstWithdrawalAmount >  1.5
+|   |--- NumberOfTerms <= 121.5
+|   |   |--- FirstWithdrawalAmount <= 4999.5
+|   |   |   |--- class: W_Validate application
+|   |   |--- FirstWithdrawalAmount >  4999.5
+|   |   |   |--- class: W_Validate application
+|   |--- NumberOfTerms >  121.5
+|   |   |--- NumberOfTerms <= 136.5
+|   |   |   |--- class: W_Validate application
+|   |   |--- NumberOfTerms >  136.5
+|   |   |   |--- class: W_Validate application
+
+
+D10 xor_ret: O_Returned during validation?
+  acc 0.938 (baseline 0.557), macro-F1 0.937 (baseline 0.358)
+|--- returned <= 0.5
+|   |--- days_since_start <= 2.3
+|   |   |--- class: O_Returned
+|   |--- days_since_start >  2.3
+|   |   |--- n_validate <= 1.5
+|   |   |   |--- class: O_Returned
+|   |   |--- n_validate >  1.5
+|   |   |   |--- class: O_Returned
+|--- returned >  0.5
+|   |--- n_later_offers <= 0.5
+|   |   |--- open_offers <= 1.5
+|   |   |   |--- class: no O_Returned
+|   |   |--- open_offers >  1.5
+|   |   |   |--- class: no O_Returned
+|   |--- n_later_offers >  0.5
+|   |   |--- open_offers <= 1.5
+|   |   |   |--- class: no O_Returned
+|   |   |--- open_offers >  1.5
+|   |   |   |--- class: no O_Returned
+
+
+D11 xor_after_va: after validation: W_Call incomplete files or outcome
+  acc 0.635 (baseline 0.592), macro-F1 0.616 (baseline 0.372)
+|--- n_incomplete <= 0.5
+|   |--- case:ApplicationType_New credit <= 0.5
+|   |   |--- Accepted_False <= 0.5
+|   |   |   |--- class: to outcome
+|   |   |--- Accepted_False >  0.5
+|   |   |   |--- class: W_Call incomplete files
+|   |--- case:ApplicationType_New credit >  0.5
+|   |   |--- returned <= 0.5
+|   |   |   |--- class: W_Call incomplete files
+|   |   |--- returned >  0.5
+|   |   |   |--- class: W_Call incomplete files
+|--- n_incomplete >  0.5
+|   |--- case:ApplicationType_New credit <= 0.5
+|   |   |--- Accepted_True <= 0.5
+|   |   |   |--- class: to outcome
+|   |   |--- Accepted_True >  0.5
+|   |   |   |--- class: to outcome
+|   |--- case:ApplicationType_New credit >  0.5
+|   |   |--- OfferedAmount <= 21800.0
+|   |   |   |--- class: to outcome
+|   |   |--- OfferedAmount >  21800.0
+|   |   |   |--- class: W_Call incomplete files
+
+
+D12 xor_after_cif: after W_Call incomplete files: validate / later offer / outcome
+  acc 0.670 (baseline 0.670), macro-F1 0.268 (baseline 0.268)
+|--- returned <= 0.5
+|   |--- FirstWithdrawalAmount <= 13750.0
+|   |   |--- FirstWithdrawalAmount <= 370.4
+|   |   |   |--- class: W_Validate application
+|   |   |--- FirstWithdrawalAmount >  370.4
+|   |   |   |--- class: W_Validate application
+|   |--- FirstWithdrawalAmount >  13750.0
+|   |   |--- class: W_Validate application
+|--- returned >  0.5
+|   |--- FirstWithdrawalAmount <= 0.1
+|   |   |--- Accepted_True <= 0.5
+|   |   |   |--- class: W_Validate application
+|   |   |--- Accepted_True >  0.5
+|   |   |   |--- class: W_Validate application
+|   |--- FirstWithdrawalAmount >  0.1
+|   |   |--- n_incomplete <= 1.5
+|   |   |   |--- class: W_Validate application
+|   |   |--- n_incomplete >  1.5
+|   |   |   |--- class: W_Validate application
+
+
+D13 xor_out: outcome: cancelled / accepted / denied
+  acc 0.874 (baseline 0.557), macro-F1 0.774 (baseline 0.239)
+|--- returned <= 0.5
+|   |--- Accepted_False <= 0.5
+|   |   |--- MonthlyCost <= 285.3
+|   |   |   |--- class: A_Cancelled
+|   |   |--- MonthlyCost >  285.3
+|   |   |   |--- class: A_Cancelled
+|   |--- Accepted_False >  0.5
+|   |   |--- days_since_start <= 4.2
+|   |   |   |--- class: A_Cancelled
+|   |   |--- days_since_start >  4.2
+|   |   |   |--- class: A_Cancelled
+|--- returned >  0.5
+|   |--- Accepted_False <= 0.5
+|   |   |--- n_incomplete <= 0.5
+|   |   |   |--- class: O_Accepted
+|   |   |--- n_incomplete >  0.5
+|   |   |   |--- class: O_Accepted
+|   |--- Accepted_False >  0.5
+|   |   |--- n_incomplete <= 0.5
+|   |   |   |--- class: A_Denied
+|   |   |--- n_incomplete >  0.5
+|   |   |   |--- class: O_Accepted
+
+
+D14 xor_oc: after cancelled/pending: cancel open offers?
+  acc 1.000 (baseline 0.527), macro-F1 1.000 (baseline 0.345)
+|--- open_offers <= 0.5
+|   |--- class: stop
+|--- open_offers >  0.5
+|   |--- class: O_Cancelled
+
+
+D15 xor_oc_again: cancel one more offer?
+  acc 1.000 (baseline 0.785), macro-F1 1.000 (baseline 0.440)
+|--- open_offers <= 0.5
+|   |--- class: stop
+|--- open_offers >  0.5
+|   |--- class: O_Cancelled
+
+
+D16 xor_ref: after denied: refuse offers?
+  acc 0.993 (baseline 0.993), macro-F1 0.498 (baseline 0.498)
+|--- n_validate <= 0.5
+|   |--- OfferedAmount <= 24500.0
+|   |   |--- NumberOfTerms <= 62.5
+|   |   |   |--- class: O_Refused
+|   |   |--- NumberOfTerms >  62.5
+|   |   |   |--- class: O_Refused
+|   |--- OfferedAmount >  24500.0
+|   |   |--- class: O_Refused
+|--- n_validate >  0.5
+|   |--- n_incomplete <= 0.5
+|   |   |--- class: O_Refused
+|   |--- n_incomplete >  0.5
+|   |   |--- n_validate <= 1.5
+|   |   |   |--- class: O_Refused
+|   |   |--- n_validate >  1.5
+|   |   |   |--- class: O_Refused
+
+
+D17 xor_ref_again: refuse one more offer?
+  acc 1.000 (baseline 0.795), macro-F1 1.000 (baseline 0.443)
+|--- open_offers <= 0.5
+|   |--- class: stop
+|--- open_offers >  0.5
+|   |--- class: O_Refused

@@ -1,0 +1,37 @@
+{
+  "version": "v01",
+  "sound": true,
+  "size": 58,
+  "CFC": 26,
+  "cyclicity": 0.397,
+  "arc degree": 0.707,
+  "train fitting cases % (TBR)": 49.9,
+  "test fitting cases % (align)": 63.2,
+  "test avg fitness (align)": 0.962,
+  "test precision (align-ETC)": 0.803,
+  "test generalization (TBR)": 0.982,
+  "test generalization (align)": 0.982,
+  "seconds": 33,
+  "top unfit variants (test)": [
+    {
+      "cases": 216,
+      "variant": "A_Create Application > A_Submitted > W_Complete application > O_Create Offer > O_Sent > W_Call after offers > W_Validate application > O_Returned > A_Denied > O_Refused"
+    },
+    {
+      "cases": 144,
+      "variant": "A_Create Application > W_Complete application > O_Create Offer > O_Sent > W_Call after offers > W_Validate application > O_Returned > A_Denied > O_Refused"
+    },
+    {
+      "cases": 124,
+      "variant": "A_Create Application > A_Submitted > O_Create Offer > O_Sent > W_Call after offers > A_Cancelled > O_Cancelled"
+    },
+    {
+      "cases": 101,
+      "variant": "A_Create Application > A_Submitted > W_Complete application > O_Create Offer > O_Sent > W_Call after offers > O_Create Offer > O_Sent > A_Cancelled > O_Cancelled > O_Cancelled"
+    },
+    {
+      "cases": 99,
+      "variant": "A_Create Application > A_Submitted > W_Handle leads > W_Complete application > O_Create Offer > O_Sent > W_Call after offers > W_Validate application > O_Returned > A_Denied > O_Refused"
+    }
+  ]
+}

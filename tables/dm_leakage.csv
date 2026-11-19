@@ -1,0 +1,7 @@
+attribute,value,offers,later O_Accepted %,later O_Cancelled %,later O_Refused %,later O_Returned %
+Selected,False,21092,0.0,94.4,5.6,7.3
+Selected,True,21723,79.3,4.5,16.2,100.0
+CreditScore > 0,False,27555,7.2,75.8,17.0,29.0
+CreditScore > 0,True,15260,100.0,0.0,0.0,100.0
+Accepted,False,12782,25.1,51.1,23.8,53.7
+Accepted,True,30033,46.7,47.8,5.5,54.6

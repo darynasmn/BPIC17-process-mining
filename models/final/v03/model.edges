@@ -1,0 +1,75 @@
+# v03: v02 + exactly one outcome: X( A_Cancelled > O_Cancelled* | O_Accepted > A_Pending > O_Cancelled* | A_Denied > O_Refused* )
+# --- application ---
+start -> A_Create Application
+A_Create Application -> xor_sub
+xor_sub -> A_Submitted
+xor_sub -> xor_sub_j
+A_Submitted -> xor_hl
+xor_hl -> W_Handle leads
+xor_hl -> xor_hl_j
+W_Handle leads -> xor_hl_j
+xor_hl_j -> xor_sub_j
+xor_sub_j -> W_Complete application
+# --- offer block: *(O_Create Offer) then *(O_Sent), as in v00/v01 ---
+W_Complete application -> xor_co_in
+xor_co_in -> O_Create Offer
+O_Create Offer -> xor_co_again
+xor_co_again -> xor_co_in
+xor_co_again -> xor_se_in
+xor_se_in -> O_Sent
+O_Sent -> xor_se_again
+xor_se_again -> xor_se_in
+xor_se_again -> xor_offer_out
+xor_offer_out -> W_Call after offers
+W_Call after offers -> xor_cao_out
+xor_cao_out -> xor_lo_in
+xor_cao_out -> xor_val_entry
+# --- validation block (v01) with the bypass of v00 ---
+xor_val_entry -> xor_bypass
+xor_bypass -> xor_va_in
+xor_bypass -> xor_outcome_entry
+xor_va_in -> W_Validate application
+W_Validate application -> xor_ret
+xor_ret -> O_Returned
+xor_ret -> xor_ret_j
+O_Returned -> xor_ret_j
+xor_ret_j -> xor_after_va
+xor_after_va -> W_Call incomplete files
+xor_after_va -> xor_outcome_entry
+W_Call incomplete files -> xor_after_cif
+xor_after_cif -> xor_va_in
+xor_after_cif -> xor_outcome_entry
+xor_after_cif -> xor_lo_in
+# --- outcome (v03): exactly one of three outcomes, then the remaining offers are closed ---
+xor_outcome_entry -> xor_out
+xor_out -> A_Cancelled
+xor_out -> O_Accepted
+xor_out -> A_Denied
+O_Accepted -> A_Pending
+A_Cancelled -> xor_out_j
+A_Pending -> xor_out_j
+xor_out_j -> xor_oc
+xor_oc -> xor_oc_in
+xor_oc -> xor_oc_j
+xor_oc_in -> O_Cancelled
+O_Cancelled -> xor_oc_again
+xor_oc_again -> xor_oc_in
+xor_oc_again -> xor_oc_j
+xor_oc_j -> xor_end
+A_Denied -> xor_ref
+xor_ref -> xor_ref_in
+xor_ref -> xor_end
+xor_ref_in -> O_Refused
+O_Refused -> xor_ref_again
+xor_ref_again -> xor_ref_in
+xor_ref_again -> xor_end
+xor_end -> end
+# later offers (after W_Call after offers / W_Call incomplete files): separate block, then validation/outcome
+xor_lo_in -> O_Create Offer @2
+O_Create Offer @2 -> xor_lco_again
+xor_lco_again -> xor_lo_in
+xor_lco_again -> xor_lse_in
+xor_lse_in -> O_Sent @2
+O_Sent @2 -> xor_lse_again
+xor_lse_again -> xor_lse_in
+xor_lse_again -> xor_val_entry
