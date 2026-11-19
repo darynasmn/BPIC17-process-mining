@@ -141,6 +141,23 @@ def decision_mining():
     write("decision_mining", lines + [r"\bottomrule", r"\end{tabular}"])
 
 
+def train_vs_test():
+    """Appendix: fitting cases and precision on the training and test log (src/train_vs_test.py)."""
+    t = pd.read_csv("tables/train_vs_test.csv")
+    lines = [r"\begin{tabular}{@{}lrrrr@{}}", r"\toprule",
+             r" & \multicolumn{2}{c}{Fitting cases (\%)} & \multicolumn{2}{c}{Precision} \\",
+             r"\cmidrule(lr){2-3}\cmidrule(l){4-5}",
+             r"Model & Train & Test & Train & Test \\", r"\midrule"]
+    for i, r in enumerate(t.itertuples(index=False)):
+        d = r._asdict()
+        star = "" if d["_1"] == "alignments" else "$^{*}$"  # token-based replay (unsound model)
+        if d["model"] == "v00":
+            lines.append(r"\midrule")
+        lines.append(f"{tex(d['model'])} & {d['_2']:.1f}{star} & {d['_6']:.1f}{star} & "
+                     f"{d['_4']:.3f}{star} & {d['_8']:.3f}{star} \\\\")
+    write("train_vs_test", lines + [r"\bottomrule", r"\end{tabular}"])
+
+
 # --- 2.4: stored outputs of the executed clustering notebook ---------------------------------
 def _nb_text(nb, marker: str, index: int = 0) -> str:
     """index-th printed text/plain output of the code cell whose source contains `marker`."""
@@ -249,6 +266,7 @@ if __name__ == "__main__":
         shutil.rmtree(d, ignore_errors=True)
         d.mkdir(parents=True)
     basic_stats(); additional_stats(); discovery_quality(); model_versions(); decision_mining()
+    train_vs_test()
     nb = nbformat.read("04_clustering.ipynb", as_version=4)
     cluster_profile(nb); ari_matrix(nb)
     model_comparison_figure(nb)

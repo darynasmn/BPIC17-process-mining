@@ -24,6 +24,7 @@ The analysis uses the BPI Challenge 2017 loan application log and covers:
 | `src/evaluation.py` | fitness, precision, generalization, simplicity, soundness |
 | `src/simplicity.py` | own simplicity metrics: size, control-flow complexity (CFC), cyclicity |
 | `src/final_model.py` | builds and evaluates one version of the final model (`models/final/<version>/`) |
+| `src/train_vs_test.py` | fitting cases and precision of all models on the training and the test log (`tables/train_vs_test.csv`) |
 | `src/draw_bpmn.py` | readable BPMN drawing of the final model (Graphviz) |
 | `src/decision_mining.py` | alignment-based decision mining (de Leoni & van der Aalst, 2013) |
 | `splits/` | case ids of the training (70 %) and test (30 %) set |
@@ -69,6 +70,7 @@ jupyter nbconvert --to notebook --execute --inplace 02_discovery.ipynb
 for v in v00 v01 v02 v03 v04; do python -m src.final_model $v; done
 jupyter nbconvert --to notebook --execute --inplace 03_decision_mining.ipynb
 jupyter nbconvert --to notebook --execute --inplace 04_clustering.ipynb
+python -m src.train_vs_test   # optional, about 30 minutes
 ```
 
 The notebooks can also be run cell by cell in Jupyter (start it with `PYTHONHASHSEED=0 jupyter lab`). `02_discovery.ipynb` takes about 10 minutes

@@ -1,0 +1,10 @@
+model,train method,train fitting cases %,train avg fitness,train precision,test method,test fitting cases %,test avg fitness,test precision
+IM 0.0,alignments,99.7,1.0,0.458,alignments,99.7,1.0,0.438
+IM 0.2,alignments,64.3,0.964,0.73,alignments,64.9,0.965,0.713
+IM 0.4,alignments,31.4,0.919,0.792,alignments,31.9,0.92,0.776
+HM,TBR,0.0,0.72,1.0,TBR,0.0,0.721,1.0
+v00,alignments,64.3,0.964,0.73,alignments,64.9,0.965,0.713
+v01,alignments,62.5,0.961,0.817,alignments,63.2,0.962,0.803
+v02,alignments,71.9,0.981,0.818,alignments,72.7,0.981,0.801
+v03,alignments,81.5,0.988,0.844,alignments,82.0,0.988,0.821
+v04,alignments,86.6,0.991,0.842,alignments,87.6,0.992,0.821
